@@ -36,25 +36,29 @@ def can_be_created_in_a_block(args = __)
     
     m.title = args["title"]
     m.release_date = args["release_date"]
-    
+    m.save 
     
   end
 end
 
 def can_get_the_first_item_in_the_database
   Movie.first 
+  
 end
 
 def can_get_the_last_item_in_the_database
   Movie.last 
+  
 end
 
 def can_get_size_of_the_database
   Movie.count 
+  
 end
 
 def can_find_the_first_item_from_the_database_using_id
   Movie.find_by(:id)
+
 end
 
 def can_find_by_multiple_attributes
@@ -63,6 +67,8 @@ def can_find_by_multiple_attributes
   # release_date == 2000
   # director == "Me"
   
+  Movie.find_by()
+
 end
 
 def can_find_using_where_clause_and_be_sorted
